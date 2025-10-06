@@ -162,7 +162,7 @@ export default function EditProjectModal({ project, onClose, onSave }: Props) {
                     <button
                         type="submit"
                         disabled={loading}
-                        className="px-4 py-2 text-sm bg-[#134280] text-white rounded-md hover:bg-[#0f2e5c]"
+                        className="px-4 py-2 text-sm bg-[#3e5641] text-white rounded-md hover:bg-[#0f2e5c]"
                     >
                         {loading ? "Saving..." : "Save Changes"}
                     </button>

@@ -78,7 +78,7 @@ export default function ArticleForm({ onSuccess }: { onSuccess: () => void }) {
                     name="title"
                     value={form.title}
                     onChange={handleChange}
-                    className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#134280]"
+                    className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#3e5641]"
                     required
                 />
             </div>
@@ -90,7 +90,7 @@ export default function ArticleForm({ onSuccess }: { onSuccess: () => void }) {
                     value={form.content}
                     onChange={handleChange}
                     rows={6}
-                    className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#134280]"
+                    className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#3e5641]"
                     required
                 />
             </div>
@@ -102,7 +102,7 @@ export default function ArticleForm({ onSuccess }: { onSuccess: () => void }) {
                     name="author"
                     value={form.author}
                     onChange={handleChange}
-                    className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#134280]"
+                    className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#3e5641]"
                     required
                 />
             </div>
@@ -116,8 +116,8 @@ export default function ArticleForm({ onSuccess }: { onSuccess: () => void }) {
                             key={cat}
                             onClick={() => handleCategoryChange(cat)}
                             className={`px-3 py-1 text-sm border rounded-md ${form.categories.includes(cat)
-                                    ? "bg-[#134280] text-white border-[#134280]"
-                                    : "bg-white text-gray-700 border-gray-300"
+                                ? "bg-[#3e5641] text-white border-[#3e5641]"
+                                : "bg-white text-gray-700 border-gray-300"
                                 }`}
                         >
                             {cat}
@@ -145,7 +145,7 @@ export default function ArticleForm({ onSuccess }: { onSuccess: () => void }) {
             <button
                 type="submit"
                 disabled={loading}
-                className="bg-[#134280] text-white px-4 py-2 rounded-md hover:bg-[#0f2e5c] transition text-sm"
+                className="bg-[#3e5641] text-white px-4 py-2 rounded-md hover:bg-[#0f2e5c] transition text-sm"
             >
                 {loading ? "Saving..." : "Save Article"}
             </button>

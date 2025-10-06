@@ -20,7 +20,7 @@ export default function StatCard({ title, value, icon, color }: StatCardProps) {
         <div
           className={cn(
             "w-12 h-12 flex items-center justify-center rounded-xl text-white",
-            color || "bg-[#134280]"
+            color || "bg-[#3e5641]"
           )}
         >
           {icon}

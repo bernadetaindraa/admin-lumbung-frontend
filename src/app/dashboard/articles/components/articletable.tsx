@@ -45,7 +45,7 @@ export default function ArticleTable() {
             text: "This article will be permanently deleted.",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: "#134280",
+            confirmButtonColor: "#3e5641",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {

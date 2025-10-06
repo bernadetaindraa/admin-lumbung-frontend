@@ -57,7 +57,7 @@ export default function ProjectForm({ onSuccess }: { onSuccess: () => void }) {
                     name="title"
                     value={form.title}
                     onChange={handleChange}
-                    className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#134280]"
+                    className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#3e5641]"
                     required
                 />
             </div>
@@ -72,7 +72,7 @@ export default function ProjectForm({ onSuccess }: { onSuccess: () => void }) {
                     value={form.description}
                     onChange={handleChange}
                     rows={3}
-                    className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#134280]"
+                    className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#3e5641]"
                     required
                 />
             </div>
@@ -88,7 +88,7 @@ export default function ProjectForm({ onSuccess }: { onSuccess: () => void }) {
                         name="location"
                         value={form.location}
                         onChange={handleChange}
-                        className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#134280]"
+                        className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#3e5641]"
                         required
                     />
                 </div>
@@ -103,7 +103,7 @@ export default function ProjectForm({ onSuccess }: { onSuccess: () => void }) {
                         name="goal"
                         value={form.goal}
                         onChange={handleChange}
-                        className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#134280]"
+                        className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#3e5641]"
                         required
                     />
                 </div>
@@ -119,7 +119,7 @@ export default function ProjectForm({ onSuccess }: { onSuccess: () => void }) {
                         name="productService"
                         value={form.productService}
                         onChange={handleChange}
-                        className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#134280]"
+                        className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#3e5641]"
                         required
                     >
                         <option value="">-- Select --</option>
@@ -139,7 +139,7 @@ export default function ProjectForm({ onSuccess }: { onSuccess: () => void }) {
                         name="industry"
                         value={form.industry}
                         onChange={handleChange}
-                        className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#134280]"
+                        className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#3e5641]"
                         required
                     >
                         <option value="">-- Select --</option>
@@ -159,7 +159,7 @@ export default function ProjectForm({ onSuccess }: { onSuccess: () => void }) {
             <button
                 type="submit"
                 disabled={loading}
-                className="bg-[#134280] text-white px-4 py-2 rounded-md hover:bg-[#0f2e5c] transition text-sm"
+                className="bg-[#3e5641] text-white px-4 py-2 rounded-md hover:bg-[#0f2e5c] transition text-sm"
             >
                 {loading ? "Saving..." : "Save Project"}
             </button>

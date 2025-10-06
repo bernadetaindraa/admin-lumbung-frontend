@@ -6,7 +6,7 @@ export default function Navbar() {
     return (
         <header className="w-full h-16 bg-white shadow-sm flex items-center justify-between px-6">
             {/* Left - Title */}
-            <h1 className="text-lg font-semibold text-[#134280]">Admin Dashboard</h1>
+            <h1 className="text-lg font-semibold text-[#3e5641]">Admin Dashboard</h1>
 
             {/* Right - Notification & User */}
             <div className="flex items-center gap-6">

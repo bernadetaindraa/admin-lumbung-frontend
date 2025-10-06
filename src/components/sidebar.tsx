@@ -9,7 +9,6 @@ export default function Sidebar() {
         { name: "Projects", icon: FolderKanban, path: "/dashboard/projects" },
         { name: "Articles", icon: FileText, path: "/dashboard/articles" },
         { name: "Careers", icon: Users, path: "/dashboard/careers" },
-        { name: "Products", icon: Store, path: "/dashboard/products" },
     ];
 
     const handleLogout = () => {
@@ -23,10 +22,10 @@ export default function Sidebar() {
             {/* Logo & Title */}
             <div>
                 <div className="flex items-center gap-2 px-6 py-4">
-                    <div className="w-8 h-8 rounded-full bg-[#134280] flex items-center justify-center text-white font-bold">
+                    <div className="w-8 h-8 rounded-full bg-[#3e5641] flex items-center justify-center text-white font-bold">
                         B
                     </div>
-                    <span className="font-semibold text-[#134280]">Beehive Drones</span>
+                    <span className="font-semibold text-[#3e5641]">Lumbung Muncul</span>
                 </div>
 
                 {/* Menu List */}
@@ -35,7 +34,7 @@ export default function Sidebar() {
                         <Link
                             key={menu.path}
                             href={menu.path}
-                            className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-[#134280]/10 hover:text-[#134280] transition"
+                            className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-[#3e5641]/10 hover:text-[#3e5641] transition"
                         >
                             <menu.icon className="w-5 h-5" />
                             <span>{menu.name}</span>
@@ -45,7 +44,7 @@ export default function Sidebar() {
             </div>
 
             {/* User Section */}
-            <div className="bg-[#134280] text-white p-4">
+            <div className="bg-[#3e5641] text-white p-4">
                 <div className="flex items-center gap-3">
                     <Image
                         src="/user-avatar.png"

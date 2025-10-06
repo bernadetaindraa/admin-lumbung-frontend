@@ -22,7 +22,7 @@ export default function DashboardPage() {
       {/* Header */}
       <h2 className="text-2xl font-semibold text-gray-800">Welcome to Dashboard</h2>
       <p className="mt-2 text-gray-600">
-        This is your admin control panel for Beehive Drones.
+        This is your admin control panel for Lumbung Muncul.
       </p>
 
       {/* Cards */}

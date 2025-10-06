@@ -90,8 +90,8 @@ export default function EditArticleModal({ article, onClose, onSave }: Props) {
                                     key={cat}
                                     onClick={() => handleCategoryChange(cat)}
                                     className={`px-3 py-1 text-sm border rounded-md ${form.categories.includes(cat)
-                                            ? "bg-[#134280] text-white border-[#134280]"
-                                            : "bg-white text-gray-700 border-gray-300"
+                                        ? "bg-[#3e5641] text-white border-[#3e5641]"
+                                        : "bg-white text-gray-700 border-gray-300"
                                         }`}
                                 >
                                     {cat}
@@ -110,7 +110,7 @@ export default function EditArticleModal({ article, onClose, onSave }: Props) {
                     </button>
                     <button
                         onClick={handleSave}
-                        className="px-4 py-2 text-sm bg-[#134280] text-white rounded-md hover:bg-[#0f2e5c]"
+                        className="px-4 py-2 text-sm bg-[#3e5641] text-white rounded-md hover:bg-[#0f2e5c]"
                     >
                         Save Changes
                     </button>

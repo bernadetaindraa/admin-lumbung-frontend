@@ -21,7 +21,7 @@ export default function LoginPage() {
                     <div className="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xl shadow-md">
                         B
                     </div>
-                    <h2 className="text-2xl font-bold text-gray-800 mt-3">Beehive Admin</h2>
+                    <h2 className="text-2xl font-bold text-gray-800 mt-3">Lumbung Admin</h2>
                     <p className="text-sm text-gray-500">Sign in to your account</p>
                 </div>
 
@@ -70,7 +70,7 @@ export default function LoginPage() {
 
                 {/* Footer */}
                 <p className="text-xs text-center text-gray-500 mt-6">
-                    © {new Date().getFullYear()} Beehive Drones. All rights reserved.
+                    © {new Date().getFullYear()} Lumbung Drones. All rights reserved.
                 </p>
             </div>
         </div>
