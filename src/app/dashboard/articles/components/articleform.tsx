@@ -1,6 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
+// @ts-ignore
+import "@uiw/react-md-editor/markdown-editor.css";
+// @ts-ignore
+import "@uiw/react-markdown-preview/markdown.css";
+
+const MDEditor = dynamic(() => import("@uiw/react-md-editor"), { ssr: false });
 
 const categories = [
     "Drone Application",
@@ -22,7 +29,7 @@ export default function ArticleForm({ onSuccess }: { onSuccess: () => void }) {
         images: [] as File[],
     });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
@@ -83,16 +90,23 @@ export default function ArticleForm({ onSuccess }: { onSuccess: () => void }) {
                 />
             </div>
 
+            {/* 📝 Ganti bagian content jadi Markdown Editor */}
             <div>
                 <label className="block text-sm font-medium text-gray-700">Content</label>
-                <textarea
-                    name="content"
-                    value={form.content}
-                    onChange={handleChange}
-                    rows={6}
-                    className="mt-1 w-full border rounded-md px-3 py-2 text-sm focus:outline-[#3e5641]"
-                    required
-                />
+                <div data-color-mode="light" className="mt-1">
+                    <MDEditor
+                        value={form.content}
+                        onChange={(v) => setForm({ ...form, content: v || "" })}
+                        height={300}
+                        preview="edit"
+                        style={{
+                            backgroundColor: "#ffffff",
+                            borderRadius: "6px",
+                            border: "1px solid #d1d5db",
+                            fontSize: "0.875rem", // text-sm
+                        }}
+                    />
+                </div>
             </div>
 
             <div>

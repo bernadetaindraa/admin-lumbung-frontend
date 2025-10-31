@@ -1,6 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
+// @ts-ignore
+import "@uiw/react-md-editor/markdown-editor.css";
+// @ts-ignore
+import "@uiw/react-markdown-preview/markdown.css";
+
+const MDEditor = dynamic(() => import("@uiw/react-md-editor"), { ssr: false });
 
 interface CareerFormProps {
     onSuccess: () => void;
@@ -28,8 +35,8 @@ export default function CareerForm({ onSuccess }: CareerFormProps) {
         };
 
         console.log("Career saved:", newCareer);
-        onSuccess(); // ✅ callback saat sukses
-        // reset form kalau mau
+        onSuccess();
+
         setTitle("");
         setQualifications("");
         setBenefits("");
@@ -51,30 +58,49 @@ export default function CareerForm({ onSuccess }: CareerFormProps) {
                     onChange={(e) => setTitle(e.target.value)}
                     className="w-full border px-3 py-2 rounded-md"
                 />
+                <p className="text-sm font-medium mb-1">Qualifications</p> 
+                <div data-color-mode="light">
+                    <MDEditor
+                        value={qualifications}
+                        onChange={(v) => setQualifications(v || "")}
+                        height={150}
+                        preview="edit"
+                        style={{
+                            backgroundColor: "#ffffff",
+                            borderRadius: "6px",
+                            border: "1px solid #d1d5db",
+                        }}
+                    />
+                </div>
 
-                <textarea
-                    placeholder="Qualifications"
-                    value={qualifications}
-                    onChange={(e) => setQualifications(e.target.value)}
-                    rows={3}
-                    className="w-full border px-3 py-2 rounded-md"
-                />
-
-                <textarea
-                    placeholder="Benefits"
-                    value={benefits}
-                    onChange={(e) => setBenefits(e.target.value)}
-                    rows={3}
-                    className="w-full border px-3 py-2 rounded-md"
-                />
-
-                <textarea
-                    placeholder="Key Responsibilities"
-                    value={keyResponsibilities}
-                    onChange={(e) => setKeyResponsibilities(e.target.value)}
-                    rows={3}
-                    className="w-full border px-3 py-2 rounded-md"
-                />
+                <p className="text-sm font-medium mb-1">Benefits</p>
+                <div data-color-mode="light">
+                    <MDEditor
+                        value={benefits}
+                        onChange={(v) => setBenefits(v || "")}
+                        height={150}
+                        preview="edit"
+                        style={{
+                            backgroundColor: "#ffffff",
+                            borderRadius: "6px",
+                            border: "1px solid #d1d5db",
+                        }}
+                    />
+                </div>
+                <p className="text-sm font-medium mb-1">Key Responsibilities</p>
+                <div data-color-mode="light">
+                    <MDEditor
+                        value={keyResponsibilities}
+                        onChange={(v) => setKeyResponsibilities(v || "")}
+                        height={150}
+                        preview="edit"
+                        style={{
+                            backgroundColor: "#ffffff",
+                            borderRadius: "6px",
+                            border: "1px solid #d1d5db",
+                        }}
+                    />
+                </div>
 
                 <input
                     type="text"

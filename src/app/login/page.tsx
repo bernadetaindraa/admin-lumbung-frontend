@@ -18,8 +18,8 @@ export default function LoginPage() {
             <div className="w-full max-w-md bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100">
                 {/* Logo / Title */}
                 <div className="text-center mb-6">
-                    <div className="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xl shadow-md">
-                        B
+                    <div className="w-14 h-14 mx-auto flex items-center justify-center text-white font-bold text-xl">
+                        <img src="/images/Lumbung1.png" alt="Lumbung" />
                     </div>
                     <h2 className="text-2xl font-bold text-gray-800 mt-3">Lumbung Admin</h2>
                     <p className="text-sm text-gray-500">Sign in to your account</p>

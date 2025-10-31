@@ -21,11 +21,13 @@ export default function Sidebar() {
         <aside className="w-64 h-screen bg-white shadow-lg flex flex-col justify-between">
             {/* Logo & Title */}
             <div>
-                <div className="flex items-center gap-2 px-6 py-4">
-                    <div className="w-8 h-8 rounded-full bg-[#3e5641] flex items-center justify-center text-white font-bold">
-                        B
-                    </div>
-                    <span className="font-semibold text-[#3e5641]">Lumbung Muncul</span>
+                <div className="flex items-center gap-2 px-6 py-4 justify-center">
+                    <Image
+                        src="/images/Lumbung1.png"
+                        alt="Lumbung Dev Logo"
+                        width={70}
+                        height={70}
+                    />
                 </div>
 
                 {/* Menu List */}
@@ -46,13 +48,15 @@ export default function Sidebar() {
             {/* User Section */}
             <div className="bg-[#3e5641] text-white p-4">
                 <div className="flex items-center gap-3">
-                    <Image
-                        src="/user-avatar.png"
-                        alt="User"
-                        width={40}
-                        height={40}
-                        className="rounded-full border-2 border-white"
-                    />
+                    <div className="p-2 rounded-full border-2 border-white">                        
+                        <Image
+                            src="/images/Lumbung2.png"
+                            alt="User"
+                            width={40}
+                            height={40}
+                            // className="rounded-full border-2 border-white"
+                        />
+                    </div>
                     <div>
                         <p className="text-sm">Welcome back 👋</p>
                         <p className="font-semibold">Admin</p>
